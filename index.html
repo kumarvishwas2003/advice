@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <title>Advice app</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *{
+      font-family: "Manrope", sans-serif;
+    }
+   .container{
+    background-color: hsl(218, 23%, 16%);
+    
+   }
+   .advice-main{
+    background-color: hsl(217, 19%, 24%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            padding-bottom: 4rem; /* Add space for the button */
+            border-radius: 1rem;
+            max-width: 90%;
+   }
+   .advice-id-head{
+    color: hsl(150, 100%, 66%);
+    font-weight: 800;
+   }
+   .advice-content{
+    font-size: 28px;
+    font-weight: 800;
+   }
+   .adviceBtn{
+    background-color: hsl(150, 100%, 66%);
+            position: absolute;
+            bottom: -2rem; /* Position button outside the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+   }
+   .hover-glow:hover {
+            box-shadow: 0 0 15px 3px hsl(150, 100%, 66%);
+        }
+        .advice-content{
+          padding:10px;
+          min-height: 190px;
+          
+        }
+  </style>
+</head>
+<body>
+  <div class="container w-screen h-screen flex justify-center items-center px-4">
+      <div class="advice-main max-w-md min-h-80 px-5 flex flex-col items-center">
+          <div class="advice-id-head flex justify-center mt-10 gap-1 text-xs tracking-wider">
+              <div class="advice-id-heading">ADVICE</div>
+              <div class="advice-id"># <span class="id"></span></div>
+          </div>
+          <div class="advice-content text-white mt-6">
+              “ <span class="content">When having a clear out, ask yourself if an item has any financial, practical or sentimental value. If not, chuck it.</span> ”
+          </div>
+          <div class="image-divider mt-5 pt-5"><img src="./images/pattern-divider-desktop.svg" alt=""></div>
+          <button class="adviceBtn w-16 h-16 flex justify-center items-center rounded-full hover-glow transition duration-300">
+              <img src="./images/icon-dice.svg" alt="">
+          </button>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
